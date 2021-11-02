@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class _00_ArrayCheatSheet {
@@ -26,9 +27,25 @@ public class _00_ArrayCheatSheet {
 			numbers[times] = ran.nextInt(100);
 		}
 		//8. without printing the entire array, print only the smallest number in the array
-		
+		int smallestNum = 100;
+		for(int times = 0; times < 50; times ++) {
+			if(numbers[times] < smallestNum) {
+				smallestNum = numbers[times];
+			}
+		}
+		System.out.println("The smallest number in the array is " + smallestNum);
 		//9 print the entire array to see if step 8 was correct
-		
+		System.out.println("");
+		System.out.println("Array:");
+		System.out.println(Arrays.toString(numbers));
 		//10. print the largest number in the array.
+		int largestNum = 0;
+		for(int times = 0; times < 50; times++) {
+			if(numbers[times] > largestNum) {
+				largestNum = numbers[times];
+			}
+		}
+		System.out.println("");
+		System.out.println("The largest number in the array is " + largestNum);
 	}
 }
